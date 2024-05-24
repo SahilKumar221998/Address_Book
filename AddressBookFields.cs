@@ -58,7 +58,7 @@ namespace AddressBook
             set {email = value; }
         }
 
-        public AddressBookMain(string firstName, string lastName, string address, string city, string state, int zip, long phone_Number, string email)
+        public AddressBookFields(string firstName, string lastName, string address, string city, string state, int zip, long phone_Number, string email)
         {
             this.firstName = firstName;
             this.lastName = lastName;
@@ -70,7 +70,8 @@ namespace AddressBook
             this.email = email;
         }
         public string ToString() {
-            return $"FirstName:- {firstName}\n LastName:- {lastName}\nAddress:- {address}\nCity:- {city}\nState:- {state}\nZip:- {zip}\nPhone_Number:- {phone_Number}\nEmail:- {email}";
+            Console.WriteLine("-------------------------------------------------------------------------");
+            return $"FirstName:- {firstName}\nLastName:- {lastName}\nAddress:- {address}\nCity:- {city}\nState:- {state}\nZip:- {zip}\nPhone_Number:- {phone_Number}\nEmail:- {email}";
         }
     }
 }
