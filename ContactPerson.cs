@@ -84,6 +84,32 @@ namespace AddressBook
             Console.WriteLine($"There is no person with that name {name}");
 
         }
+        //Method to remove a person
+        public void removePerson()
+        {
+            Console.WriteLine("Enter the Name ");
+            string name = Console.ReadLine();
+            foreach (AddressBookFields person in arrayList)
+            {
+                if (person.FirstName.Equals(name))
+                {
+                    arrayList.Remove(person);
+                    Console.WriteLine("Removed " + person.FirstName);
+                    return;
+                }
+            }
+            Console.WriteLine($"There is no person with that name {name}");
+
+        }
+        //Method to show all users
+        public void showAllRecords()
+        {
+            foreach (AddressBookFields fields in arrayList)
+            {
+                Console.WriteLine(fields.ToString());
+                Console.WriteLine("-------------------------------------------------------------------------");
+            }
+        }
 
     }
 }
